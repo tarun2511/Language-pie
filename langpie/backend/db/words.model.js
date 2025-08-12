@@ -10,7 +10,7 @@ const WordSchema = new mongoose.Schema({
     },
     deck: {
         type: String,
-        reuqired: [true, "Please enter a valid deck"]
+        required: [true, "Please enter a valid deck"]
     }
 });
 
