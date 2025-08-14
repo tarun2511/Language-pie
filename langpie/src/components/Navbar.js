@@ -16,9 +16,4 @@ export default function Navbar(){
     <img src={de} height={40} style={{marginTop: "15px", marginRight: "10px"}} alt="nav-img"/>
     </div>
     </div>)
-
-
-
-
-    
 }

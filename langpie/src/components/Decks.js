@@ -11,11 +11,11 @@ export default function Deck(){
                 <tr>
                     <th>Deck</th>
                     <th style={{paddingLeft: "100px"}}>New</th>
-                    <th style={{paddingLeft: "30px"}}>Due</th>
+                    <th style={{paddingLeft: "30px", color: '#FF4D4F'}}>Due</th>
                 </tr>
                 {
                     decks.map(el => {
-                        return <tr><Link style={{textDecoration:"none", color: "black"}} to="/deckDetails" target="_blank"><td>{el}</td></Link>
+                        return <tr><td><Link style={{textDecoration:"none", color: "black"}} to="/deckDetails" target="_blank">{el}</Link></td>
                         <td style={{paddingLeft: "100px"}}>10</td>
                         <td style={{paddingLeft: "30px"}}>4</td></tr>
 

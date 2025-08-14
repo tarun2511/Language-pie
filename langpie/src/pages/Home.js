@@ -12,10 +12,11 @@ import fruits from "../images/fruits.png";
 import general from "../images/general.png";
 import greetings from "../images/greetings.png";
 import Decks from "../components/Decks";
-
+import Portal from "../components/Portal/Portal";
 
 export default function Home(){
 
+    
     const {isModalClosed, setIsModalClosed} = useContext(modalContext); 
     return(
         <>
@@ -25,7 +26,7 @@ export default function Home(){
         <h3>Your decks</h3>
         <AddIcon onClick={e => setIsModalClosed(false)}/>
         {
-            isModalClosed? null: <div><AddWord /></div>
+            !isModalClosed && <Portal><AddWord /></Portal>
         }
         </div>
 

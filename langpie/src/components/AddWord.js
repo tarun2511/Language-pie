@@ -22,18 +22,20 @@ export default function AddWord(){
 
     return (
         <>
-        <div className="add-word-modal-container">
-        <CancelIcon onClick={closeModal} sx={{position: "absolute", top: "5px", right: "10px"}}/>
-        <form>
-        <input type="text" value={front} onChange={e => setFront(e.target.value)} placeholder="word"/><br/>
-        <input type="text" value={back} onChange={e => setBack(e.target.value)}  placeholder="deck name"/><br/>
-        <select>
-            {selectOptions.map(el => {
-                return <option value={el}>{el}</option>
-            })}
-        </select>
-        <Button variant="contained" type="submit" onClick={handleSubmit} sx={{width:"20px", height: "18px", textTransform: "none"}}>Add</Button>
-        </form>
+        <div className="modal-overlay">
+            <div className='modal-content'>
+                <CancelIcon onClick={closeModal} sx={{position: "absolute", top: "5px", right: "10px"}}/>
+                <form>
+                <input type="text" value={front} onChange={e => setFront(e.target.value)} placeholder="word"/><br/>
+                <input type="text" value={back} onChange={e => setBack(e.target.value)}  placeholder="deck name"/><br/>
+                <select>
+                    {selectOptions.map(el => {
+                        return <option value={el}>{el}</option>
+                    })}
+                </select>
+                <Button variant="contained" type="submit" onClick={handleSubmit} sx={{width:"20px", height: "18px", textTransform: "none"}}>Add</Button>
+                </form>
+            </div>
         </div>
         </>
     )
